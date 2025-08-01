@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Детская музыкальная группа Робинзон</title>
+    <style>
+        /* Основные цвета */
+        :root {
+            --main-red: #FF4500;
+            --main-black: #000000;
+            --accent-white: #FFFFFF;
+            --bg-light: #222222;
+            --text-color: #FFFFFF;
+        }
+
+        /* Стили для body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-color);
+        }
+
+        /* Стили для header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--main-black);
+            color: var(--accent-white);
+            padding: 1rem;
+        }
+
+        /* Стили для навигационного меню */
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--accent-white);
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: var(--main-red);
+        }
+
+        /* Активная ссылка */
+        nav a.active {
+            color: var(--accent-white);
+        }
+
+        /* Общие стили для секций */
+        section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-white);
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Стили для блока участников */
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .member-card {
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: var(--bg-light);
+        }
+
+        /* Стили для галереи */
+        .gallery-img {
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Стили для таблицы расписания */
+        table {
+            width: 100%;
+            margin: 2rem 0;
+            border-collapse: collapse;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        th, td {
+            padding: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--main-red);
+            color: var(--accent-white);
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        
+ <!-- Логотип группы -->
+ <img src="logo.png" alt="Логотип группы Робинзон" style="width: 100px; height: auto;" />
+
+ <!-- Меню навигации -->
+ <nav>
+ <ul>
+ <li><a href="#about">О нас</a></li>
+ <li><a href="#members">Участники</a></li>
+ <li><a href="#gallery">Галерея</a></li>
+ <li><a href="#schedule">Расписание</a></li>
+ </ul>
+ </nav>
+ </header>
+
+ <!-- Секция "О нас" -->
+ <section id="about">
+ <h1>О нас</h1>
+ <p>Группа "Робинзон" — детская музыкальная команда, созданная в 2015 году. Мы играем веселые композиции и любим радовать публику.</p>
+ </section>
+
+ <!-- Секция "Участники" -->
+ <section id="members">
+ <h1>Участники группы</h1>
+ <div class="members-grid">
+ <!-- Карточки участников -->
+ <div class="member-card">
+ <img src="member1.jpg" alt="Участник №1">
+ <h3>Иван Иванов</h3>
+ <p>Гитарист</p>
+ </div>
+ <div class="member-card">
+ <img src="member2.jpg" alt="Участник №2">
+ <h3>Елена Петрова</h3>
+ <p>Вокалистка</p>
+ </div>
+ <div class="member-card">
+ <img src="member3.jpg" alt="Участник №3">
+ <h3>Андрей Сидоров</h3>
+ <p>Бас-гитарист</p>
+ </div>
+ <div class="member-card">
+ <img src="member4.jpg" alt="Участник №4">
+ <h3>Марина Смирнова</h3>
+ <p>Клавишница</p>
+ </div>
+ <div class="member-card">
+ <img src="member5.jpg" alt="Участник №5">
+ <h3>Алексей Кузнецов</h3>
+ <p>Барабанщик</p>
+ </div>
+ <div class="member-card">
+ <img src="member6.jpg" alt="Участник №6">
+ <h3>Анна Васильева</h3>
+ <p>Флейтистка</p>
+ </div>
+ <div class="member-card">
+ <img src="member7.jpg" alt="Участник №7">
+ <h3>Дмитрий Николаев</h3>
+ <p>Скрипач</p>
+ </div>
+ <div class="member-card">
+ <img src="member8.jpg" alt="Участник №8">
+ <h3>Светлана Сергеева</h3>
+ <p>Трубач</p>
+ </div>
+ </div>
+ </section>
+
+ <!-- Галерея -->
+ <section id="gallery">
+ <h1>Фотографии выступлений</h1>
+ <div class="gallery-container">
+ <img class="gallery-img" src="concert1.jpg" alt="Фото концерта 1"/>
+ <img class="gallery-img" src="concert2.jpg" alt="Фото концерта 2"/>
+ <img class="gallery-img" src="concert3.jpg" alt="Фото концерта 3"/>
+ <img class="gallery-img" src="concert4.jpg" alt="Фото концерта 4"/>
+ </div>
+ </section>
+
+ <!-- Расписание -->
+ <section id="schedule">
+ <h1>Расписание мероприятий</h1>
+ <table>
+ <tr>
+ <th>Дата</th>
+ <th>Мероприятие</th>
+ <th>Место</th>
+ </tr>
+ <tr>
+ <td>10 мая</td>
+ <td>Концерт в парке Горького</td>
+ <td>Москва</td>
+ </tr>
+ <tr>
+ <td>25 июня</td>
+ <td>Выступление в театре "Современник"</td>
+ <td>Санкт-Петербург</td>
+ </tr>
+ </table>
+ </section>
+
+ </body>
+</html>
